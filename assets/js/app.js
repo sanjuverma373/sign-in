@@ -32,3 +32,10 @@ eye2.addEventListener("click", function () {
     eye2.classList.remove("d-block");
   }
 });
+
+const preloader = document.getElementById("preloader");
+setTimeout(() => {
+    document.getElementById("preloader").classList.add("d_none")
+    document.body.classList.remove("flow-hidden")
+
+}, 2000);

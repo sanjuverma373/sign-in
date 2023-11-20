@@ -57,7 +57,21 @@ input:focus {
         border-radius: 50px;
         background: var(--Linear, linear-gradient(84deg, #2194FF 10.02%, #2563EB 90.05%));
         border: none;
+        transition: .4s;
 }
+
+.sign-btn:hover {
+        animation: common-btn1 1s;
+        box-shadow: 0 0 0 0.7em transparent;
+        background: var(--Linear, linear-gradient(84deg, #2194FF 10.02%, #2563EB 90.05%));
+}
+
+@keyframes common-btn1 {
+        0% {
+                box-shadow: 0 0 #2563eb;
+        }
+}
+
 
 .line-hr {
         width: 110px;
@@ -74,9 +88,13 @@ input:focus {
 }
 
 .common-crd:hover {
-        box-shadow: 0px 0px 0px 2px;
-        color: blue;
+        animation: common-btn1 1s;
+        box-shadow: 0 0 0 0.7em transparent;
+        background: white;
+        
 }
+
+
 
 .w-47 {
         width: 47%;
@@ -124,6 +142,39 @@ input:focus {
 a {
         color: var(--color-gray) !important;
 }
+
+
+
+/* -------------------------------------preloader------------------------------------- */
+.loader_bg {
+        /* position: fixed; */
+        z-index: 9;
+        background: #000;
+      }
+
+      .preloder-img{
+      animation-name: lodar;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      }
+
+      @keyframes lodar{
+        0%{
+          scale: 0.7;
+        }
+        25%{
+          scale: 1.1;
+        }
+        50%{
+          scale: 0.7;
+        }
+        75%{
+          scale: 1.1;
+        }
+        0%{
+          scale: 0.7;
+        }
+      }
 
 @media (min-width:992px) {
         .my-container {
